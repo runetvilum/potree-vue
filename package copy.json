@@ -1,0 +1,35 @@
+{
+  "name": "potree",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "potree": "cd node_modules/potree && gulp build pack && cp -R ./build/potree/resources ../../static && cp -R ./build/potree/workers ../../static",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
+  },
+  "dependencies": {
+    "core-js": "^3.9.1",
+    "nuxt": "^2.15.3",
+    //"potree": "github:le34/potree#6a340bb61abf76cdc14005b11d5b77821bcac4d3",
+    "potree": "github:potree/potree#develop",
+    "proj4": "^2.7.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^6.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/vuetify": "^1.11.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.7.0",
+    "prettier": "^2.2.1",
+    "exports-loader": "^0.7.0",
+    "imports-loader": "^0.8.0"
+  }
+}
